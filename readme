@@ -1,0 +1,39 @@
+macOS Cihazınızda Nasıl 10 Saniyede IP Adresinizi Değiştirebilirsiniz?
+Adım 1: Homebrew Kurun
+Homebrew, macOS ve Linux için popüler bir paket yöneticisidir. Aşağıdaki komutu terminalde çalıştırarak Homebrew'u kurabilirsiniz:
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+Adım 2: Homebrew ile Tor'u Kurun
+
+Homebrew yüklendikten sonra Tor'u kurmak için şu komutu çalıştırın:
+
+brew install tor
+
+
+Adım 3: Tor Servisini Başlatın
+Tor'u başarıyla yükledikten sonra arka planda çalıştırmak için:
+
+brew services start tor
+
+
+Adım 4: Tor'un Çalıştığını Doğrulayın
+Tor'un düzgün çalıştığından emin olmak için terminalde şu komutu kullanarak Tor'u çalıştırın:
+
+tor
+
+
+Adım 5: Sistem Proxy Ayarlarını Yapılandırın
+Tor genellikle SOCKS5 proxy olarak çalışır. Sistem genelinde Tor proxy kullanmak için şu adımları takip edin:
+
+Sistem Tercihleri → Ağ → Kullandığınız bağlantıyı (Wi-Fi veya Ethernet) seçin.
+Gelişmiş butonuna tıklayın.
+Proxyler sekmesine geçin.
+SOCKS Proxy seçeneğini işaretleyin ve şu bilgileri girin:
+Proxy Sunucusu: 127.0.0.1
+Port: 9050
+Değişiklikleri kaydedin ve çıkın.
+Adım 6: Bash Script ile IP Adresini 10 Saniyede Değiştirme
+10 saniyede bir Tor servisini durdurup başlatarak IP adresinizi değiştirebilirsiniz. bash scriptini indirin ve çalıştırın
+
+
+
